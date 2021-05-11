@@ -2,7 +2,7 @@
 	<view class="content">
 		<view class="top-back-img">
 			<view>
-				<text>2020年8月2日-10月2日</text>
+				<text>2021年9月28日-10月3日</text>
 			</view>
 		</view>
 		<view style="background: rgb(84, 152, 239);">

@@ -10,19 +10,19 @@
 		{
             "path" : "pages/signup/signup",
             "style": {
-				"titleImage": "static/top-back-img.png"
+				"titleImage": "static/topback.jpeg"
 			}
         },
 		{
 			"path": "pages/upload/upload",
 			"style": {
-				"titleImage": "static/top-back-img.png"
+				"titleImage": "static/topback.jpeg"
 			}
 		},
 		{
 			"path": "pages/poster/poster",
 			"style": {
-				"titleImage": "static/top-back-img.png"
+				"titleImage": "static/topback.jpeg"
 			}
 		},
         {
