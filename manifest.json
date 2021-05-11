@@ -76,8 +76,8 @@
         "enable" : false
     },
     "h5" : {
-        "title" : "云打卡",
-        "domain" : "https://wechat.ip885.cn/tvyun/sites/act/airshow2020/",
+        "title" : "航展打卡",
+        "domain" : "",
         "router" : {
             "base" : "./",
             "mode" : "history"

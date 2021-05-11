@@ -3,7 +3,7 @@
 		<!-- 时间背景图 -->
 		<view class="top-back-img">
 			<view>
-				<text>2020年8月2日-10月2日</text>
+				<text>2021年9月28日-10月3日</text>
 			</view>
 		</view>
 		<view style="background: #4187f1;">
@@ -104,7 +104,7 @@
 	export default {
 		data () {
 			return {
-				actEndTime: '2020/11/10',
+				actEndTime: '2021/08/19',
 				autoplay: true,
 				leftImgUrl: '',
 				rightImgUrl: '',
@@ -125,11 +125,11 @@
 			  s.parentNode.insertBefore(hm, s);
 			})();
 			// 如果wxtoken为空，则重定向到微信授权页面
-			if(this.getCookie("wxtoken") == ""){
-				window.location.href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=auth&reffer=" + encodeURIComponent(window.location.href);
-			}else{
-				console.log(this.getCookie("wxtoken"))
-			}
+			// if(this.getCookie("wxtoken") == ""){
+			// 	window.location.href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=auth&reffer=" + encodeURIComponent(window.location.href);
+			// }else{
+			// 	console.log(this.getCookie("wxtoken"))
+			// }
 			var href = "https://res.wx.qq.com/open/js/jweixin-1.4.0.js";
 			var head= document.getElementsByTagName('head')[0];
 			var script= document.createElement('script');
@@ -137,13 +137,13 @@
 			script.src= href;
 			head.appendChild(script);
 			
-			href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=wxJsSdkWithShare&rand="+(new Date()).valueOf()
-				+"&reffer=" +encodeURIComponent(window.location.href);
-			head= document.getElementsByTagName('head')[0];
-			script= document.createElement('script');
-			script.type= 'text/javascript';
-			script.src= href;
-			head.appendChild(script);
+			// href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=wxJsSdkWithShare&rand="+(new Date()).valueOf()
+			// 	+"&reffer=" +encodeURIComponent(window.location.href);
+			// head= document.getElementsByTagName('head')[0];
+			// script= document.createElement('script');
+			// script.type= 'text/javascript';
+			// script.src= href;
+			// head.appendChild(script);
 		},
 		mounted() {
 			this.getVideoList()
@@ -187,16 +187,16 @@
 				return "";
 			},
 			judge (url) {
-				if(this.getCookie("wxtoken") == ""){
-					window.location.href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=auth&reffer=" + encodeURIComponent(window.location.href);
-				} else {
-					uni.navigateTo({
-						url: url
-					})
-				}
-				// uni.navigateTo({
-				// 	url: url
-				// })
+				// if(this.getCookie("wxtoken") == ""){
+				// 	window.location.href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=auth&reffer=" + encodeURIComponent(window.location.href);
+				// } else {
+				// 	uni.navigateTo({
+				// 		url: url
+				// 	})
+				// }
+				uni.navigateTo({
+					url: url
+				})
 			},
 			fullScreen (data) {
 				this.videoContext = uni.createVideoContext(data)
