@@ -142,10 +142,10 @@
 			this.token = localStorage.getItem("wechat_token") ? localStorage
 				.getItem("wechat_token") : this.getCookie("wechat_token");
 			// 如果token为空，则重定向到微信授权页面
-			// if (!this.token) {
-			// 	window.location.href = '/wechat/oauth/8'
-			// 			+ "?rdurl=" + encodeURIComponent(window.location.href)
-			// }
+			if (!this.token) {
+				window.location.href = '/wechat/oauth/8'
+						+ "?rdurl=" + encodeURIComponent(window.location.href)
+			}
 			console.log('this.token',this.token)
 			
 			var title = encodeURIComponent("云相约 再翱翔")
