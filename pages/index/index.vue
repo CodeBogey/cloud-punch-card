@@ -113,7 +113,8 @@
 				current: 0,
 				airList: [],
 				mapList: [],
-				videoContext: ''
+				videoContext: '',
+				token: ''
 			}
 		},
 		onLoad() {
@@ -126,9 +127,10 @@
 			})();
 			// 如果wxtoken为空，则重定向到微信授权页面
 			// if(this.getCookie("wxtoken") == ""){
-			// 	window.location.href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=auth&reffer=" + encodeURIComponent(window.location.href);
+			// 	window.location.href = '/wechat/oauth/8'
+			// 	    + "?rdurl=" + encodeURIComponent(window.location.href)
 			// }else{
-			// 	console.log(this.getCookie("wxtoken"))
+			// 	console.log('wxt',this.getCookie("wxtoken"))
 			// }
 			var href = "https://res.wx.qq.com/open/js/jweixin-1.4.0.js";
 			var head= document.getElementsByTagName('head')[0];
@@ -137,13 +139,27 @@
 			script.src= href;
 			head.appendChild(script);
 			
-			// href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=wxJsSdkWithShare&rand="+(new Date()).valueOf()
-			// 	+"&reffer=" +encodeURIComponent(window.location.href);
-			// head= document.getElementsByTagName('head')[0];
-			// script= document.createElement('script');
-			// script.type= 'text/javascript';
-			// script.src= href;
-			// head.appendChild(script);
+			this.token = localStorage.getItem("wechat_token") ? localStorage
+				.getItem("wechat_token") : this.getCookie("wechat_token");
+			// 如果token为空，则重定向到微信授权页面
+			if (!this.token) {
+				window.location.href = '/wechat/oauth/8'
+						+ "?rdurl=" + encodeURIComponent(window.location.href)
+			}
+			console.log('this.token',this.token)
+			
+			var title = encodeURIComponent("云相约 再翱翔")
+			var description = encodeURIComponent("第十三届中国国际航空航天博览会云打卡！")
+			var thumb = encodeURIComponent("https://wechat.ip885.cn/2021/airshow2021/static/title-back-img.png")
+			var url = encodeURIComponent(window.location.href)
+			var href = "https://wechat.ip885.cn/tvyun/?m=act&a=share&sa=wxJsSdkWithShare&rand="+(new Date()).valueOf()
+			+"&reffer=" +encodeURIComponent(window.location.href) + "&title=" + title + "&description=" + description
+			+"&thumb=" + thumb + "&url=" + url;
+			var head= document.getElementsByTagName('head')[0];
+			var script= document.createElement('script');
+			script.type= 'text/javascript';
+			script.src= href;
+			head.appendChild(script);
 		},
 		mounted() {
 			this.getVideoList()
@@ -188,7 +204,9 @@
 			},
 			judge (url) {
 				// if(this.getCookie("wxtoken") == ""){
-				// 	window.location.href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=auth&reffer=" + encodeURIComponent(window.location.href);
+				// 	// window.location.href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=auth&reffer=" + encodeURIComponent(window.location.href);
+				// 	window.location.href = '/wechat/oauth/8'
+				// 		    + "?rdurl=" + encodeURIComponent(window.location.href)
 				// } else {
 				// 	uni.navigateTo({
 				// 		url: url

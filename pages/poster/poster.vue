@@ -34,8 +34,11 @@
 				rownum: ''
 			}
 		},
-		mounted() {
+		onLoad() {
 			this.getUserInfo()
+		},
+		mounted() {
+			
 		},
 		methods: {
 			getUserInfo () {
