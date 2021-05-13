@@ -126,13 +126,7 @@
 			  let s = document.getElementsByTagName("script")[0]; 
 			  s.parentNode.insertBefore(hm, s);
 			})();
-			// 如果wxtoken为空，则重定向到微信授权页面
-			// if(this.getCookie("wxtoken") == ""){
-			// 	window.location.href = '/wechat/oauth/8'
-			// 	    + "?rdurl=" + encodeURIComponent(window.location.href)
-			// }else{
-			// 	console.log('wxt',this.getCookie("wxtoken"))
-			// }
+			
 			var href = "https://res.wx.qq.com/open/js/jweixin-1.4.0.js";
 			var head= document.getElementsByTagName('head')[0];
 			var script= document.createElement('script');
@@ -140,14 +134,19 @@
 			script.src= href;
 			head.appendChild(script);
 			
-			this.token = localStorage.getItem("wechat_token") ? localStorage
-				.getItem("wechat_token") : this.getCookie("wechat_token");
-			// 如果token为空，则重定向到微信授权页面
-			if (!this.token) {
-				window.location.href = '/wechat/oauth/8'
-						+ "?rdurl=" + encodeURIComponent(window.location.href)
+			if (this.getCookie("wxtoken") == "") {
+				window.location.href = "https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=auth&reffer=" + encodeURIComponent(window.location.href)
+			} else {
+				console.log('wxtoken', this.getCookie("wxtoken"))
 			}
-			console.log('this.token',this.token)
+			// this.token = localStorage.getItem("wechat_token") ? localStorage
+			// 	.getItem("wechat_token") : this.getCookie("wechat_token");
+			// // 如果token为空，则重定向到微信授权页面
+			// if (!this.token) {
+			// 	window.location.href = '/wechat/oauth/8'
+			// 			+ "?rdurl=" + encodeURIComponent(window.location.href)
+			// }
+			// console.log('this.token',this.token)
 			
 			var title = encodeURIComponent("云相约 再翱翔")
 			var description = encodeURIComponent("第十三届中国国际航空航天博览会云打卡！")
