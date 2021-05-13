@@ -36,15 +36,19 @@
 		},
 		onLoad() {
 			this.getUserInfo()
+			this.getwxInfo()
 		},
 		mounted() {
 			
 		},
 		methods: {
+			getwxInfo() {
+				var obj = JSON.parse(this.getCookie('wxuserinfo'))
+				console.log('obj',obj)
+				this.wxname = obj.nickname || '游客'
+			},
 			getUserInfo () {
-				// console.log('aa',this.getCookie('wxuserinfo'))
-				// var obj = JSON.parse(this.getCookie('wxuserinfo'))
-				this.wxname = '游客'
+				
 				axios({
 					// url: 'https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=myInfo&wxtoken=KhMTx7wPj8L6hX9XJdMYRQ0n3GJ73OGRv8dZZs4LOaoM0DPD',
 					url: 'https://wechat.ip885.cn/tvyun/?m=act&a=airShow2020&sa=myInfo',

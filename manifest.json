@@ -76,7 +76,7 @@
         "enable" : false
     },
     "h5" : {
-        "title" : "航展打卡",
+        "title" : "第十三届中国国际航空航天博览会云打卡",
         "domain" : "",
         "router" : {
             "base" : "./",
