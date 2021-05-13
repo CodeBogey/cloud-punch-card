@@ -77,6 +77,7 @@
 				<view class="video-wrap">
 					<view class="video-item" v-for="(item, index) in videoList" :key="item.id">
 						<video :src="item.video" :id="'Fvideo' + index" @fullscreenchange="outFullScreen" @play="fullScreen('Fvideo' + index)" controls></video>
+						<!-- <video :src="item.video" :id="'Fvideo' + index" controls></video> -->
 						<text>{{item.title}}</text>
 					</view>
 				</view>
@@ -484,12 +485,13 @@
 				flex-wrap: wrap;
 				.video-item {
 					width: 42%;
-					height: 260upx;
+					// height: 260upx;
 					text-align: center;
 					margin-bottom: 40upx;
 					video {
 						width: 100%;
-						height: 85%;
+						// height: 85%;
+						height: 220upx;
 					}
 					text {
 						color: #fff;
