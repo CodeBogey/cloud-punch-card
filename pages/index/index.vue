@@ -172,21 +172,21 @@
 				axios({
 					url: 'https://wechat.ip885.cn/tvyun/sites/record/?m=api&a=airShowData&type=home&source=video',
 				}).then((res) => {
-					this.videoList = res.data.data.list
+					this.videoList = res.data.data.list.splice(0, 6)
 				})
 			},
 			getAirList () {
 				axios({
 					url: 'https://wechat.ip885.cn/tvyun/sites/record/?m=api&a=airShowData&type=home&source=link',
 				}).then((res) => {
-					this.airList = res.data.data.list
+					this.airList = res.data.data.list.splice(0, 4)
 				})
 			},
 			getMapList () {
 				axios({
 					url: 'https://wechat.ip885.cn/tvyun/sites/record/?m=api&a=airShowData&type=home&source=photo',
 				}).then((res) => {
-					this.mapList = res.data.data.list
+					this.mapList = res.data.data.list.splice(0,5)
 				})
 			},
 			getCookie (c_name) {
