@@ -11,7 +11,7 @@
 		</view>
 		<view style="background: rgb(84, 152, 239); position: relative;">
 			<view class="qrcode">
-				<image src="~@/static/text-code.png"></image>
+				<image src="~@/static/newQr.png"></image>
 			</view>
 			<view class="participant">
 				<view v-if="username !== ''"><text>我是第{{rownum}}位参与者</text></view>

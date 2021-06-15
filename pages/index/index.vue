@@ -105,7 +105,7 @@
 	export default {
 		data () {
 			return {
-				actEndTime: '2021/09/09',
+				actEndTime: '2021/09/28',
 				autoplay: true,
 				leftImgUrl: '',
 				rightImgUrl: '',
