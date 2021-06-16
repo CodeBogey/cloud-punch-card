@@ -1,5 +1,8 @@
 <template>
 	<view class="content">
+		<view style="width: 100%; height: 45px;">
+			<image src="~@/static/newtop2.jpeg" style="width: 100%; height: 100%;"></image>
+		</view>
 		<!-- 时间背景图 -->
 		<view class="top-back-img">
 			<view>
@@ -28,19 +31,19 @@
 				<view class="common-text"><text>- 打卡赢好礼 -</text></view>
 				<view class="jp">
 					<view class="jp-item">
-						<image src="~@/static/ydj.png"></image>
+						<image src="~@/static/edj.png"></image>
 						<view><text>一等奖</text></view>
-						<view><text>航展双人<br>成人门票<br>10名</text></view>
+						<view><text>航展单人成人门票<br><br>3名</text></view>
 					</view>
 					<view class="jp-item">
-						<image src="~@/static/edj.png" mode="aspectFit"></image>
+						<image src="~@/static/xiangce.jpeg" mode="aspectFit"></image>
 						<view><text>二等奖</text></view>
-						<view><text>航展单人<br>成人门票<br>30名</text></view>
+						<view><text>航展邮册<br><br>10名</text></view>
 					</view>
 					<view class="jp-item">
 						<image src="~@/static/clothes.png" mode="aspectFit"></image>
 						<view><text>三等奖</text></view>
-						<view><text>航展专属徽章+<br>专属T恤<br>130名</text></view>
+						<view><text>航展专属T恤<br><br>30名</text></view>
 					</view>
 				</view>
 			</view>

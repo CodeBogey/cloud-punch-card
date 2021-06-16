@@ -4,25 +4,29 @@
 			"path": "pages/index/index",
 			"style": {
 				// "navigationBarTitleText": "云打卡",
-				"titleImage": "static/topback.jpeg"
+				// "titleImage": "static/newtop1.jpeg"
+				"navigationStyle": "custom"
 			}
 		},
 		{
             "path" : "pages/signup/signup",
             "style": {
-				"titleImage": "static/topback.jpeg"
+				// "titleImage": "static/topback.jpeg"
+				"navigationStyle": "custom"
 			}
         },
 		{
 			"path": "pages/upload/upload",
 			"style": {
-				"titleImage": "static/topback.jpeg"
+				// "titleImage": "static/topback.jpeg"
+				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/poster/poster",
 			"style": {
-				"titleImage": "static/topback.jpeg"
+				// "titleImage": "static/topback.jpeg"
+				"navigationStyle": "custom"
 			}
 		},
         {

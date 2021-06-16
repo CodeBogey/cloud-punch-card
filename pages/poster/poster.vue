@@ -1,5 +1,8 @@
 <template>
 	<view class="content" id="capture">
+		<view style="width: 100%; height: 45px;">
+			<image src="~@/static/newtop2.jpeg" style="width: 100%; height: 100%;"></image>
+		</view>
 		<img :src="msg" class="msg">
 		<view class="top-back-img">
 			<view class="user-name">
