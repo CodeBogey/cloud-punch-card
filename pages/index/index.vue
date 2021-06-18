@@ -275,7 +275,7 @@
 				let day = parseInt(time / (60 * 60 * 24))
 				// console.log(this.timeFormat(day) + '天')
 				this.countDownNum = this.timeFormat(day).toString().split('')
-				// console.log(this.countDownNum)
+				console.log(this.countDownNum + '天')
 				this.leftImgUrl = `https://wechat.ip885.cn/tvyun//sites/act/airshow2020/numbers/${this.countDownNum[0]}.png`
 				this.rightImgUrl = `https://wechat.ip885.cn/tvyun//sites/act/airshow2020/numbers/${this.countDownNum[1]}.png`
 			}
